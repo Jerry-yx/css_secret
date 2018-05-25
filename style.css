@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-05-25 10:11:30
+ * @version $Id$
+ */
+ body{
+ 	background:#414149c4;
+ 	color:#964747;
+ }
+ div{
+ 	margin:6px;
+ 	padding:1em;
+ }
+.normalBtn{
+	padding:.2em .5em;
+	border :1px solid rgba(0,0,0,.1);
+	background:#3A9Daa linear-gradient(hsla(0,0%,20%,.2),transparent);
+	border-radius:.1em;
+	box-shadow:0 .05em 0.25em rgba(0,0,0,.5);
+	color:white;
+	text-shadow:0 -0.05em 0.05em rgba(0,0,0,.5);
+	line-height:1.5;
+	font-size:185%;
+}
+/* 
+//背景和边框
+//半透明边框 */
+
+.a1{
+	width:9em;
+	height: 5em;
+	border:6px solid rgba(255,255,255,.5);
+	background:#FCE2E2;
+	background-clip:padding-box;
+}
+/* 多重边框方案·
+1、box-shadow .第4个参数为扩张半径。
+ */
+
+.a2{
+	box-shadow: 0 0 0 1em #FEA7A7,0 0 0 2em #EF8585, 0 0.25em 0.5em 2em #A03434;
+	width:9em;
+	height: 5em;
+	padding:2em;
+	background:#FCE2E2;
+	margin:2.2em;
+}
