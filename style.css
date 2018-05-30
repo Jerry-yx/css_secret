@@ -37,6 +37,7 @@
 }
 /* 多重边框方案·
 1、box-shadow .第4个参数为扩张半径。
+2、outline outline-offset规定描边与边框的距离
  */
 
 .a2{
@@ -47,3 +48,67 @@
 	background:#FCE2E2;
 	margin:2.2em;
 }
+.a3{
+	outline:dashed red .1em;
+	outline-offset:-1em;
+	width:9em;
+	height: 5em;
+	background:#FCE2E2;
+}
+/* 背景定位：
+background-posiition:top xxem left xxem;
+background-origin:padding-box, content-box;
+ */
+.a4{
+	width:12em;
+	height: 12em;
+	background:url('images/Lock.png') no-repeat #e8e8e8eb;
+	background-origin:content-box;
+	background-position:bottom 12px right 0 ;
+	padding:1em;
+ }
+
+ /* 边框内圆角 
+1、两个div
+2、box-shadow,outline
+ */
+.a5{
+	width:14em;
+	height: 10em;
+	background:#8AFDE2;
+	border-radius:1em;
+	box-shadow:0 0 0 0.5em #37CCCA;
+	outline:solid #37CCCA 0.56em;
+	margin-top:2em;
+ }
+ /*  条纹背景
+修改background-size和角度即可得到花纹的背景。
+修改角度45deg以及四条颜色可以得到斜条纹
+repeating-linear-gradient(45deg,
+#fb3, #58a 30px);
+同色系的用声色做底色，白色透明度的颜色做条纹。
+ */
+.a6{
+	width:20em;
+	height: 30em;
+	background: linear-gradient(120deg,#F6FC80 50%,#7ED9DE 0) 0 0 /50px 50px no-repeat;
+	margin-top:2em;
+ }
+.a6{ 
+	width:20em;
+	height: 10em;
+	background:linear-gradient(45deg,#F6FC80 25%,#7ED9DE 0,#7ED9DE 50%,#F6FC80 0,#F6FC80 75%,#7ED9DE 0) 0 0 /20px 20px ;
+	margin-top:2em;
+ }
+.a6{ 
+	width:20em;
+	height: 10em;
+	background:repeating-linear-gradient(60deg,#F6FC80,#F6FC80 20px,#7ED9DE 0 ,#7ED9DE 40px) ;
+	margin-top:2em;
+ }
+.a6{ 
+	width:20em;
+	height: 10em;
+	background: #6911A7 repeating-linear-gradient(60deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 20px,#6911A7 0 ,#6911A7 40px) ;
+	margin-top:2em;
+ }
