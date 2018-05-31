@@ -112,3 +112,31 @@ repeating-linear-gradient(45deg,
 	background: #6911A7 repeating-linear-gradient(60deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 20px,#6911A7 0 ,#6911A7 40px) ;
 	margin-top:2em;
  }
+ .a13{
+ 	width:20em;
+	height: 10em;
+	background:#D73278;
+	background-image:radial-gradient(#FF7EF1 30% ,transparent 0),
+	radial-gradient(#FF7EF1 30% ,transparent 0);
+	background-size:2em 2em ;
+	background-position:0 0 ,1em 1em;
+ }
+ /* 连续的图像边框  在背景图上叠加一层白色背景，border透明显示出背景图。*/
+ .a14{
+ 	width:29em;
+	height:13em;
+ 	background:linear-gradient(white,white) padding-box,
+ 	url(images/qing.jpg) border-box 0 / cover;
+ 	border: 1.5em solid transparent;
+ }
+ /* 信封边框 */
+ .a15{
+ 	width:29em;
+	height:13em;
+	//background:white;
+	background-image: linear-gradient(white ,white),
+	repeating-linear-gradient(45deg,red 0,red 1em,transparent 0 ,transparent 2em,blue 0,blue 3em,transparent 0 ,transparent 4em) ;
+	background-origin:padding-box,border-box;
+	background-size: cover;
+	border:1em solid transparent;
+ }
