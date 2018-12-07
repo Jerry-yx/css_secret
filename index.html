@@ -9,41 +9,105 @@
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <button class="normalBtn">normalBtn</button>
-    <h1>边框：</h1>
-    <div class="a1">透明边框 background-clip</div>
-    <div class="a2">多重边框text-shadow</div>
-    <h1>背景：</h1>
-    <div class="a3"></div>
-    <div class="a4"></div>
-    <div class="a5"></div>
-    <div class="a6"></div>
-    <div class="a7"></div>
-    <div class="a8"></div>
-    <div class="a9"></div>
-    <div class="a10"></div>
-    <div class="a11"></div>
-    <div class="a12"></div>
-    <div class="a13"></div>
-    <div class="a14"></div>
-    <div class="a15"></div>
-    <div class="a16"></div>
-    <div class="a17">脚注</div>
-    <div class="a18"></div>
-    <div class="a19"></div>
-    <div class="a20"></div>
-    <div class="a21"></div>
-    <div class="a22"></div>
-    <div class="a23">平行四边形</div>
-    <div class="a24"><img src="./images/q7.png" alt=""></div>
-    <div class="a25"><img src="./images/q3.png" alt=""></div>
-    <div class="a26"></div>
-    <div class="a27"></div>
-    <div class="a28"></div>
-    <div class="a29"></div>
-    <div class="a30"></div>
-    <div class="a31"></div>
-    <div class="a32"></div>
-    <div class="a33"></div>
+    <div class="style1">
+        <h1>边框：</h1>
+        <div class="desc">rgba颜色设置</div>
+        <div class="a1">透明边框 background-clip</div>
+        <div class="desc">box-shadow：第四个参数是扩展半径，多个box-shadow叠加形成的多重边框。</div>
+        <div class="a2">多重边框box-shadow</div>
+    </div>
+    <div class="style1">
+        <h1>背景：</h1>
+        <div class="desc">outline属性设置。style,color,width;outline-offset:像素值（相对元素的边框而言的距离），负值时在元素内。</div>
+        <div class="a3"></div>
+        <div class="desc">    background-origin: content-box; background-position:bottom right ，不设置position默认为0，0，设置了其中一个position默认为center，background-origin定义的是背景位置（background-position）的起始点；而background-clip是对背景（图片和背景色）的切割</div>
+        <div class="a4"></div>
+        <div class="desc">box-shadow （会沿用box的圆角） 和outline （不会沿用box的圆角）组合起来</div>
+        <div class="a5"></div>
+        <div class="desc">linear-gradient （单个设定单元内的颜色渐变）
+            详解 <a href = 'https://segmentfault.com/a/1190000015098396' target='new_tab'>https://segmentfault.com/a/1190000015098396</a>
+        </div>
+        <div class="a6"></div>
+        <div class="desc">linear-gradient (#F6FC80 25%,#7ED9DE 0,#7ED9DE 50%,#F6FC80 0,#F6FC80 75%,#7ED9DE 0)修改角度45deg以及四条颜色可以得到斜条纹</div>
+        <div class="a7"></div>
+        <div class="desc">repeating-linear-gradient （基于整个box的重复）,两个颜色就可以得到斜条纹。</div>
+        <div class="a8"></div>
+        <div class="desc">基于同一色调的渐变，background-color设置底色，repeat-linear-gradient设置重复的不同透明白色的渐变</div>
+        <div class="a9"></div>
+        <div class="desc">基于同色系的棋盘背景：</div>
+        <div class="a9-1"></div>
+        <div class="desc">基于同色系的棋盘背景2：</div>
+        <div class="a9-2"></div>
+        <div class="desc">radial-gradient 
+            详解 <a href = 'https://segmentfault.com/a/1190000015111508' target='new_tab'>https://segmentfault.com/a/1190000015111508</a>
+        </div>
+        <div class="a10"></div>
+        <div class="desc">背景图，两张背景图叠加，形成的图片背景边框，前面的图片背景origin为border-box后面的为content-box</div>
+        <div class="a11"></div>
+        <div class="desc"> border的背景图片和content的背景图片是分开渲染的。添加background-origin: border-box;
+        信封边框1、1em的padding宽度，backgroun-image两个图片背景叠加，内部为linear-gradient两个白色的渐变。前面的图片背景origin为content-box后面的为padding-box</div>
+        <div class="a12"></div>
+        <div class="desc">信奉边框2、1em的border宽度，backgroun-image两个图片背景叠加，内部为linear-gradient两个白色的渐变。前面的图片背景origin为border-box后面的为content-box</div>
+        <div class="a13"></div>
+        <div class="desc">蚂蚁动态边框：</div>
+        <div class="a14"></div>
+        <div class="desc">脚注，利用tranarent不展示后边的背景色。</div>
+        <div class="a15">脚注</div>
+    </div>
+    <div class="style1">
+        <h1>形状：</h1>
+        <div class="desc">
+            <p>当任意两个相邻圆角的半径之和超过 border box 的尺寸时， 用户
+            代理必须<span class='red'>按比例</span>减小各个边框半径所使用的值， 直到它们不会相互重叠
+            为止。 </p>
+            <p>border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
+            和垂直半径， 只要用一个斜杠（/） 分隔这两个值即可。
+            它不仅可以接受长度值， 还可以接受百分比值。 这个
+            百分比值会基于元素的尺寸进行解析</p>
+            <ul>
+                <li>border-top-left-radius
+            </li>
+                <li>border-top-right-radius</li>
+                <li>border-bottom-right-radius</li>
+                <li>border-bottom-left-radius</li>
+            </ul>
+            <p>为所有四个角提供完全不同的水平和垂直半径，</p>
+        </div>
+        <div class="a16"></div>
+        <div class="desc">圆：width:0,height:0;border宽度一致；正方形且每个角的的<span class="red">半径都一样且大于50%</span></div>
+        <div class="a17"></div>
+        <div class="desc">半圆/半椭圆：对称的图形,其中两个角的radius为0，其他两个的半径为50% 100%，50%为相邻拼接的那个半径，半圆适当增大拼接半径的border大小为另外一个的2倍。</div>
+        <div class="a18"></div>
+        <div class="desc"></div>
+        <div class="a19"></div>
+        <div class="desc">4分之一圆，其中一个角占100% 100%。其他角水平和垂直都为0</div>
+        <div class="a20"></div>
+        <div class="desc">平行四边形作为背景，且字不会扭曲。用伪类元素做平行四边形背景，z-index:-1.transform:skew(-50deg)</div>
+        <div class="a21">平行四边形</div>
+        <div class="desc">菱形图片头像 正方形图片和框，img放大1.42倍 rotate 旋转 scale 缩放</div>
+        <div class="a22"><img src="./images/q7.png" alt=""></div>
+        <div class="desc"> 菱形图片头像   clip-path: polygon(0 50%, 50% 100%, 100% 50%,50% 0 )</div>
+        <div class="a23"><img src="./images/q3.png" alt=""></div>
+        <div class="desc">切角效果 利用渐变来实现  切除多个角，多层级渐变叠加，更改渐变size</div>
+        <div class="a24"></div>
+        <div class="desc">多层线性渐变叠加，更改渐变角度，和size,position </div>
+        <div class="a25"></div>
+        <div class="desc">多层径向渐变叠加，更改渐变角度，和size,position</div>
+        <div class="a26"></div>
+        <div class="desc">用伪类做花边。用径向渐变做花边，规定圆心起始位置为at top,ellise,横向半径和竖向半径。</div>
+        <div class="a27"></div>
+        <div class="desc"></div>
+        <div class="a28"></div>
+        <div class="desc"></div>
+        <div class="a29"></div>
+        <div class="desc"></div>
+        <div class="a30"></div>
+        <div class="desc"></div>
+        <div class="a31"></div>
+        <div class="desc"></div>
+        <div class="a32"></div>
+        <div class="desc"></div>
+        <div class="a33"></div>
+     </div>
 </body>
 </html>

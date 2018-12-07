@@ -25,6 +25,30 @@
 	line-height:1.5;
 	font-size:185%;
 }
+.red{
+	color:red;
+}
+.style1{
+    background: #f5f5fb;
+}
+
+.style1:after{
+	content:'';
+	display:block;
+	width:0;
+	clear:both;
+}
+
+.style1 div{
+	/* float:left; */
+	/* border:1px solid #b4b4b7; */
+}
+.style1 div.desc{
+	color:#891717;
+	/* border:none; */
+	background:none;
+	margin-top:1em;
+}
 /* 
 //一、背景和边框
 //半透明边框 */
@@ -91,9 +115,10 @@ repeating-linear-gradient(45deg,
  */
 .a6{
 	width:20em;
-	height: 30em;
+	height: 10em;
 	background: linear-gradient(120deg,#F6FC80 50%,#7ED9DE 0) 0 0 /50px 50px no-repeat;
 	margin-top:2em;
+	border: 1px solid #b4b4b7;
  }
 .a7{ 
 	width:20em;
@@ -110,10 +135,28 @@ repeating-linear-gradient(45deg,
 .a9{ 
 	width:20em;
 	height: 10em;
-	background: #6911A7 repeating-linear-gradient(60deg,rgba(255,255,255,.2),rgba(255,255,255,.2) 20px,#6911A7 0 ,#6911A7 40px) ;
+	background:#6911A7 repeating-linear-gradient(60deg,rgba(255,255,255,.3),rgba(255,255,255,.3) 20px,rgba(255,255,255,.5) 0 ,rgba(255,255,255,.5) 40px);
 	margin-top:2em;
  }
- .a13{
+ .a9-1{ 
+    width: 20em;
+    height: 20em;
+    background: #6aa3e0;
+    background-image: repeating-linear-gradient(rgba(255, 255 ,255,0.6) 0,rgba(255, 255 ,255,0.6) 1px,rgba(0 ,0, 0,0.3) 0 ,rgba(0, 0 ,0,0.3) 2em), 
+    repeating-linear-gradient(90deg,rgba(255, 255 ,255,0.6) 0,rgba(255, 255 ,255,0.6) 1px,rgba(0 ,0, 0,0.3) 0 ,rgba(0, 0 ,0,0.3) 2em);
+    background-position: 0 0;
+ }
+ .a9-2{/*  //最后一个颜色可以不写终点。 */
+     width: 20em;
+    height: 20em;
+    background: #6aa3e0;
+    background-image: linear-gradient(90deg,rgba(255,255,255,0.2),rgba(255,255,255,0.2) 1px,rgba(0,0,0,0.3) 0), 
+    linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2) 1px,rgba(0,0,0,0.3) 0 ), 
+    linear-gradient(0,white 0 ,white 2px,transparent 0), 
+    linear-gradient(90deg,white 0 ,white 2px,transparent 0);
+    background-size: 2em 2em,2em 2em,6em 6em,6em 6em;
+}
+ .a10{
  	width:20em;
 	height: 10em;
 	background:#D73278;
@@ -123,22 +166,22 @@ repeating-linear-gradient(45deg,
 	background-position:0 0 ,1em 1em;
  }
  /* 连续的图像边框  在背景图上叠加一层白色背景，border透明显示出背景图。*/
- .a14{
+ .a11{
  	width:29em;
 	height:13em;
  	background:linear-gradient(white,white) padding-box,
- 	url(images/qing.jpg) border-box 0 / cover;
+ 	url(images/q4.jpg) border-box 0 / cover;
  	border: 1.5em solid transparent;
  }
  /* 信封边框  border的背景图片和content的背景图片是分开渲染的。添加background-origin: border-box;*/
- .a15{
+ .a12{
  	width: 29em;
     height: 13em;
     background-image: linear-gradient(white ,white), repeating-linear-gradient(45deg,red 0,red 1em,transparent 0 ,transparent 2em,blue 0,blue 3em,transparent 0 ,transparent 4em);
     background-clip: content-box,padding-box;
     background-size: cover;
  }
- .a15{
+ .a13{
  	width: 29em;
     height: 13em;
     background-image: linear-gradient(white ,white),
@@ -150,7 +193,7 @@ repeating-linear-gradient(45deg,
  }
  /* 蚂蚁行军样式框 a15的基础上将border设置成1px */
  @keyframes ants { 100% { background-position: 100% } }
- .a16{
+ .a14{
 	width: 29em;
 	height: 13em;
 	background-image: linear-gradient(white 0 ,white 100%),repeating-linear-gradient(-45deg,red 0,red 25%,blue 0,blue 50%);
@@ -163,7 +206,7 @@ repeating-linear-gradient(45deg,
 	background-size: 1em 1em;
  }
  /* 脚注 */
- .a17{
+ .a15{
 	background: white;
 	background-image: linear-gradient(90deg, black 0,black 20%,transparent 0 ,transparent 100%);
 	background-size: 100% 3px;
@@ -187,7 +230,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
  border-bottom-right-radius
  border-bottom-left-radius
 为所有四个角提供完全不同的水平和垂直半径， */
-.a18{
+.a16{
 	height: 0;
 	width: 0;
 	background: yellow;
@@ -199,7 +242,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	padding: 0;
 }
 /* 椭圆 */
-.a19{
+.a17{
 	width:2em;
 	height:3em;
 	border-radius:50%;
@@ -214,7 +257,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 /* 半椭圆 对称的图形，相加为100% 因此半径为50%；设置为0之后该角就为直角，就不存在这个border的内容
 半圆只需要宽度的高度的2倍
 */
-.a20{
+.a18{
 	height: 0;
 	width: 0;
 	padding: 0;
@@ -224,7 +267,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	border-right: 4em solid white;
 	border-radius:50% / 100% 100% 0 0 ;
 }
-.a21{
+.a19{
 	height: 0;
 	width: 0;
 	padding: 0;
@@ -235,7 +278,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	border-radius:100% 0 0 100% / 50%;
 }
 /* 四分之一圆 */
-.a22{
+.a20{
 	height: 0;
 	width: 0;
 	padding: 0;
@@ -246,13 +289,14 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	border-radius:100% 0 0 0
 }
 /* 平行四边形  skew 变形*/
-.a23{
+.a21{
 	height:1em;
 	width:6em;
 	position:relative;
 	background: initial;
+	z-index:1;
 }
-.a23:before{
+.a21:before{
 	content:'';
 	display:block;
 	top:0;
@@ -265,7 +309,7 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	transform:skew(-50deg);
 }
 /* 菱形图片头像 正方形图片和框，img放大1.42倍 rotate 旋转 scale 缩放*/
-.a24{
+.a22{
 	width:6em;
 	height:6em;
 	transform:rotate(45deg);
@@ -273,26 +317,26 @@ border-radius， 有一个鲜为人知的真相： 它可以单独指定水平
 	overflow: hidden;
 	margin-left: 2em;
 }
-.a24 img{
+.a22 img{
 	width:100%;
 	transform:rotate(-45deg) scale(1.42);
 }
 /* 图片剪裁 clip-path 任意点到点的多边形剪裁 不支持IE11，兼容性不好 */
-.a25{
+.a23{
 	background: initial;
 }
-.a25 img{
+.a23 img{
 	width:8em;
 	clip-path:polygon(0 50%, 50% 100%, 100% 50%,50% 0 );
 }
 /* 切角效果 利用渐变来实现  切除多个角，多层级渐变叠加，更改渐变size
 radial-gradient 波浪弧边的效果*/
-.a26{
+.a24{
 	width:10em;
 	height:12em;
-	background:linear-gradient(225deg,#FFF8F533 0,#FFF8F533 95%,transparent 0,transparent 100%);
+	background:linear-gradient(225deg,#b16d4fd4 0,#9c390f33 95%,transparent 0,transparent 100%);
 }
-.a27{
+.a25{
 	width:10em;
 	height:12em;
 	background:linear-gradient(225deg,#F1A4A4 0,#F1A4A4 95%,transparent 0,transparent 100%) bottom left,
@@ -302,7 +346,7 @@ radial-gradient 波浪弧边的效果*/
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
 }
-.a28{
+.a26{
 	width:10em;
 	height:12em;
 	background:radial-gradient(circle at top left,transparent 0,transparent 16%,#F1A4A4 0,#F1A4A4 100%) top left,
@@ -312,13 +356,13 @@ radial-gradient 波浪弧边的效果*/
 	background-size: 50% 50%;
 	background-repeat: no-repeat;
 }
-.a29{
+.a27{
 	width:10em;
 	height:12em;
 	position:relative;
 	padding:0;
 }
-.a29:after{
+.a27:after{
 	content: '';
     display: block;
     position: absolute;
@@ -328,7 +372,7 @@ radial-gradient 波浪弧边的效果*/
     background-size: 18px 15px;
     height: 15px;
 }
-.a30{
+.a28{
     position: relative;
     width: 262px; height: 262px;
     border-radius: 50%;
@@ -337,7 +381,7 @@ radial-gradient 波浪弧边的效果*/
     linear-gradient(60deg,#343434cc,#343434cc 60%,transparent 0, transparent 50%) 0 100% /100% 50% no-repeat,
     repeating-radial-gradient(circle,#1f1d1d9e,#1f1d1d9e 3px,#adabab ,#adabab  4px,#1f1d1d9e,#1f1d1d9e 6px); 
 }
-.a30:after {
+.a28:after {
     position: absolute;
     top: 50%; left: 50%;
     margin: -35px;
@@ -347,4 +391,10 @@ radial-gradient 波浪弧边的效果*/
     background: #b5ac9a;
     box-shadow: 0 0 0 4px #da5b33, inset 0 0 0 27px #da5b33;
     content: '';
+}
+.a29{
+	    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle,#bdb7b7 ,#bdb7b7 1px,#6b6666 ,#6b6666 9px), linear-gradient(45deg,#ff000000,#ffffff00 50%);
 }
