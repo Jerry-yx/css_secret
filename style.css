@@ -440,3 +440,88 @@ radial-gradient 波浪弧边的效果*/
 .a33:hover{
 	clip-path:polygon(0 0 ,0 100%,100% 100%,100% 0);
 }
+/* 梯形 */
+.a34,.a35{
+	width:5em;
+	height:30px;
+	z-index:1;
+	position:relative;
+	text-align:center;
+    background: none;
+}
+.a34:before,.a35:before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transform: scaleY(1.4) perspective(1em) rotateX(5deg);
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    transform-origin: bottom;
+    width: 100%;
+    background: #fed63d;
+}
+.a35:before{
+	transform-origin: bottom left;
+}
+.a36,.a37,.a38,.a39,.a40{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(to left,#8add91 0,#8add91 50%,#427d3e 0);
+    position: relative;
+}
+.a36:before,.a37:before,.a38:before,.a39:before,.a40:before{
+	content: '';
+    width: 50%;
+    background: #8add91;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(60deg);
+    transform-origin: right;
+}
+.a37,.a39{
+	background: linear-gradient(to right,#8add91 0,#8add91 50%,#427d3e 0);
+}
+.a37:before,.a39:before{
+    left: auto;
+    right: 0;
+    transform: rotate(60deg);
+    transform-origin: left;
+}
+/* 大于180度得饼图 */
+.a38:before{
+	background: #427d3e;
+	transform: rotate(60deg);
+}
+.a39:before,.a40:before{
+	 background: #8add91;
+	 animation:rotate 50s linear infinite forwards,colors 100s step-end infinite forwards;
+	 transform: rotate(0);
+}
+.a40:before{
+
+	 animation-delay:inherit;
+	 animation-play-state: paused;
+}
+@keyframes rotate{
+	to { transform: rotate(.5turn); }
+}
+@keyframes colors{
+	50%{background: #427d3e;}
+}
+svg{
+
+}
+circle{
+	stroke-dasharray: 50 198;
+	stroke-dasharray: 50 198;
+    stroke-width: 80;
+    stroke: grey;
+    fill:yellowgreen;
+}
